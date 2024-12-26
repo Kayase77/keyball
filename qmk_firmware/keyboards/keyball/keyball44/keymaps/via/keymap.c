@@ -82,7 +82,7 @@ combo_t key_combos[] = {
     COMBO(jk_combo, KC_BTN1), // jk同時押しで左クリック
     COMBO(kl_combo, KC_BTN2), // kl同時押しで右クリック
     COMBO(jl_combo, KC_BTN3), // jl同時押しでホイールクリック
-    COMBO(io_combo, KC_LNG2), // io同時押しでLANG2に切替
-    COMBO(we_combo, KC_LNG1), // we同時押しでLANG1に切替
+    COMBO(io_combo, KC_LNG1), // io同時押しでLANG1に切替
+    COMBO(we_combo, KC_LNG2), // we同時押しでLANG2に切替
 };
 #endif
