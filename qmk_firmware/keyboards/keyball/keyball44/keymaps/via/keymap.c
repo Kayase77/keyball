@@ -69,3 +69,27 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+#ifdef COMBO_ENABLE
+// コンボキーの定義
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END}; // jk同時押し
+const uint16_t PROGMEM kl_combo[] = {KC_K, KC_L, COMBO_END}; // kl同時押し
+const uint16_t PROGMEM jl_combo[] = {KC_J, KC_L, COMBO_END}; // jl同時押し
+
+combo_t key_combos[] = {
+    COMBO(jk_combo, KC_BTN1), // jk同時押しで左クリック
+    COMBO(kl_combo, KC_BTN2), // kl同時押しで右クリック
+    COMBO(jl_combo, KC_BTN3), // jl同時押しでホイールクリック
+};
+#endif
+
+#ifdef COMBO_ENABLE
+// コンボキーの定義
+const uint16_t PROGMEM io_combo[] = {KC_I, KC_O, COMBO_END}; // io同時押し
+const uint16_t PROGMEM we_combo[] = {KC_W, KC_E, COMBO_END}; // we同時押し
+
+combo_t key_combos[] = {
+    COMBO(io_combo, KC_LNG2), // io同時押しでLANG2に切替
+    COMBO(we_combo, KC_LNG1), // we同時押しでLANG1に切替
+};
+#endif
